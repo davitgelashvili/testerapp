@@ -50,6 +50,81 @@ body {
   padding-bottom: 8px;
 }
 
+.croppr-region {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.tester {
+  width: 100%;
+  height: 200px;
+}
+
+.upload {
+  width: 100%;
+}
+
+.upload__form {
+  width: 100%;
+}
+
+.upload__design {
+  width: 360px;
+}
+
+.upload__design--img {
+  width: 100%;
+}
+
+.upload__live {
+  width: 360px;
+  height: 600px;
+}
+
+.upload__live--iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.image-decorator {
+  width: 360px;
+}
+
+.image-decorator img {
+  width: 100%;
+}
+
+.select-areas-overlay {
+  overflow: hidden;
+  position: absolute;
+}
+
+.select-areas-outline {
+  background: #fff url("../../img/outline.gif");
+  overflow: hidden;
+}
+
+.select-areas-resize-handler {
+  background-color: #000;
+  border: 1px #fff solid;
+  height: 8px;
+  width: 8px;
+  overflow: hidden;
+}
+
+.select-areas-delete-area {
+  background: url("../../img/bt-delete.png");
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+}
+
+.delete-area {
+  position: absolute;
+  cursor: pointer;
+  padding: 5px;
+}
+
 .bar {
   max-width: 281px;
   width: 100%;

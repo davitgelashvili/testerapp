@@ -17,3 +17,91 @@
         padding-bottom: 8px;
     }
 }
+
+.croppr-region {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+
+
+
+.tester {
+    width: 100%;
+    height: 200px;    
+}
+.upload {
+    width: 100%;
+
+    &__form {
+        width: 100%;
+    }
+
+    &__design {
+        width: 360px;
+
+        &--img {
+            width: 100%;
+        }
+    }
+
+    &__live {
+        width: 360px;
+        height: 600px;
+
+        &--iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.image-decorator {
+    width: 360px;
+    img {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+.select-areas-overlay {
+	// background-color: #000;
+	overflow: hidden;
+	position: absolute;
+}
+.blurred {
+	// filter: url("../../img/filters.svg#blur3px");
+	// -webkit-filter: blur(3px);
+	// -moz-filter: blur(3px);
+	// -o-filter: blur(3px);
+	// filter: blur(3px);
+}
+
+.select-areas-outline {
+	background: #fff url('../../img/outline.gif');
+	overflow: hidden;
+}
+
+.select-areas-resize-handler {
+	background-color: #000;
+	border: 1px #fff solid;
+	height: 8px;
+	width: 8px;
+	overflow: hidden;
+}
+
+.select-areas-delete-area {
+	background: url('../../img/bt-delete.png');
+	cursor: pointer;
+	height: 16px;
+	width: 16px;
+}
+.delete-area {
+	position: absolute;
+	cursor: pointer;
+	padding: 5px;
+}
