@@ -1,3 +1,23 @@
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
 .dashboard {
     width: 100%;
     height: 100%;
@@ -29,39 +49,104 @@
 
 .tester {
     width: 100%;
-    height: 200px;    
-}
-.upload {
-    width: 100%;
+    &__section {
+        width: 50%;
 
-    &__form {
-        width: 100%;
+        &--border {
+            border-right: 1px solid red;
+        }
+    }
+}
+
+.mobile {
+    width: 375px;
+    height: 812px;
+    background-color: yellow;
+
+    &__title {
+        margin-bottom: 8px;
+        color: #000;
+        font-size: 16px;
     }
 
+    &__desc {
+        max-width: 220px;
+        margin-bottom: 8px;
+        color: #cecece;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    &__upload {
+        position: relative;
+
+        &--input {
+            position: absolute;
+            display: none;
+        }
+
+        &--btn {
+            background-color: silver;
+            color: #000;
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+        }
+    }
+}
+
+.design {
+    display: flex;
+    // display: none;
+}
+
+.view {
     &__design {
-        width: 360px;
+        display: none;
+        // display: flex;
+        width: 100%;
+        height: 100%;
+        background-color: silver;
+        overflow: auto;
 
         &--img {
             width: 100%;
+            height: fit-content;
         }
     }
+
 
     &__live {
-        width: 360px;
-        height: 600px;
+        display: none;
+        // display: flex;
+        width: 100%;
+        height: 100%;
+        background-color: silver;
+        overflow-y: auto;
+        overflow-x: hidden;
 
-        &--iframe {
+        &--img {
             width: 100%;
-            height: 100%;
+            height: fit-content;
+            // height: 100%;
         }
     }
 }
-.image-decorator {
-    width: 360px;
-    img {
-        width: 100%;
+
+
+.live {
+    display: flex;
+    &__live{
+        display: none;
     }
 }
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-@import url(c:\Users\admin\Desktop\testerapp\css\fonts.css);
+@import url(c:\Users\admin\Desktop\testerapp\old\css\fonts.css);
 * {
   margin: 0;
   padding: 0;
@@ -32,26 +32,6 @@ body {
   font-family: 'SF-Pro-Display-Semibold';
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 1px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 .dashboard {
   width: 100%;
   height: 100%;
@@ -77,100 +57,41 @@ body {
 
 .tester {
   width: 100%;
+  height: 200px;
 }
 
-.tester__section {
-  width: 50%;
+.upload {
+  width: 100%;
 }
 
-.tester__section--border {
-  border-right: 1px solid red;
+.upload__form {
+  width: 100%;
 }
 
-.mobile {
-  width: 375px;
-  height: 812px;
-  background-color: yellow;
+.upload__design {
+  width: 360px;
 }
 
-.mobile__title {
-  margin-bottom: 8px;
-  color: #000;
-  font-size: 16px;
+.upload__design--img {
+  width: 100%;
 }
 
-.mobile__desc {
-  max-width: 220px;
-  margin-bottom: 8px;
-  color: #cecece;
-  font-size: 16px;
-  text-align: center;
+.upload__live {
+  width: 360px;
+  height: 600px;
 }
 
-.mobile__upload {
-  position: relative;
-}
-
-.mobile__upload--input {
-  position: absolute;
-  display: none;
-}
-
-.mobile__upload--btn {
-  background-color: silver;
-  color: #000;
-  font-size: 16px;
-  padding: 8px 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  border: none;
-}
-
-.design {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.view__design {
-  display: none;
+.upload__live--iframe {
   width: 100%;
   height: 100%;
-  background-color: silver;
-  overflow: auto;
 }
 
-.view__design--img {
+.image-decorator {
+  width: 360px;
+}
+
+.image-decorator img {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.view__live {
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: silver;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.view__live--img {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.live {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.live__live {
-  display: none;
 }
 
 .select-areas-overlay {

@@ -10,20 +10,69 @@
     <title>Tester APP</title>
 </head>
 <body>
-    <div class="d-flex">
-        <div>
-            <label for="input" class="image-previewer" data-cropzee="input"></label>
-            <input id="input" type="file" accept="image/*">
-            <button onclick="alert(cropzeeGetImage('input'))">Get Image (as blob / data-url)</button>
-        </div>
+    <div class="tester d-flex">
+        <div class="tester__section tester__section--border d-flex justify-content-center align-items-center">
+            <div class="mobile d-flex justify-content-center align-items-center">
+                <div class="design flex-column align-items-center">
+                    <h1 class="mobile__title medium">Design Version</h1>
+                    <div class="mobile__desc medium">Upload Ui/Ux Design version image</div>
+                    <label class="mobile__upload">
+                        <input type="file" onchange="viewImage(this)" class="mobile__upload--input">
+                        <div class="mobile__upload--btn medium">Upload</div>
+                    </label>
+                </div><!-- upload version -->
 
+                <div class="view view__design">
+                    <img src="img/view.jpg" alt="design view img" class="view__design--img">
+                </div>
+            </div>
+        </div><!-- design version end -->
+
+        <div class="tester__section tester__section--border d-flex justify-content-center align-items-center">
+            <div class="mobile d-flex justify-content-center align-items-center">
+                <div class="live flex-column align-items-center">
+                    <h1 class="mobile__title medium">Design Version</h1>
+                    <div class="mobile__desc medium">Upload Ui/Ux Design version image</div>
+                    <input type="text" class="live__link">
+                    <button class="mobile__upload--btn medium" onclick="liveLink()">
+                        Upload
+                    </button>
+                </div><!-- upload version -->
+
+                <div class="view view__live">
+                    <img src="" alt="live view img" class="view__live--img">
+                </div>
+            </div>
+
+            <div>
+                <div class="image-decorator">
+                    <img alt="Image principale" id="example" class="upload__descign--img" src="src"/>
+                </div>
+                <table>
+                    <tr>
+                        <td class="actions">
+                            <input type="button" id="btnView" value="Display areas" class="actionOn" />
+                            <input type="button" id="btnViewRel" value="Display relative" class="actionOn" />
+                            <input type="button" id="btnNew" value="Add New" class="actionOn" />
+                            <input type="button" id="btnNews" value="Add 2 New" class="actionOn" />
+                            <input type="button" id="btnReset" value="Reset" class="actionOn" />
+                            <input type="button" id="btnDestroy" value="Destroy" class="actionOn" />
+                            <input type="button" id="btnCreate" value="Create" class="actionOff" />
+                        </td>
+                        <td>
+                            <div id="output" class='output'> </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
     </div>
     
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/gh/BossBele/cropzee@latest/dist/cropzee.js" defer></script> -->
-    <script src="js/croperr.js"></script>
-    <script src="js/crop.js"></script>
+    <script src="js/jquery.selectareas.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>
