@@ -67,18 +67,31 @@ function liveLink() {
 function cropper(){
 
     $('.view__design--img').selectAreas({
-        minSize: [1, 1],
+        minSize: [0, 0],
         onChanged: debugQtyAreas,
-        width: 376,
+        width: 375,
         areas: [
             {
-                x: 1,
-                y: 2,
-                width: 6,
-                height: 1,
+                x: 0,
+                y: 0,
+                width: 0,
+                height: 0,
             }
         ]
     });
+
+    // გამოძახება
+    $('.view__live--img').selectAreas({
+        minSize: [0, 0],
+        onChanged : debugQtyAreas,
+        width: 375,
+    });
+
+    output("created")
+    $('.actionOff').attr("disabled", "disabled");
+    $('.actionOn').removeAttr("disabled")
+    // var areas = $('.view__live--img').selectAreas('areas');
+    // displayAreas(areas);
     
     $('#btnView').click(function () {
         var areas = $('.view__live--img').selectAreas('areas');
@@ -101,9 +114,9 @@ function cropper(){
     });
     $('#btnCreate').attr("disabled", "disabled").click(function () {
         $('.view__live--img').selectAreas({
-            minSize: [10, 10],
+            minSize: [0, 0],
             onChanged : debugQtyAreas,
-            width: 500,
+            width: 375,
         });
     
         output("created")
@@ -129,8 +142,8 @@ function cropper(){
         }, areaOption2 = {
             x: areaOption1.x + areaOption1.width + 10,
             y: areaOption1.y + areaOption1.height - 20,
-            width: 50,
-            height: 20,
+            width: 0,
+            height: 0,
         };
         output("Add a new area: " + areaToString(areaOption1) + " and " + areaToString(areaOption2))
         $('.view__live--img').selectAreas('add', [areaOption1, areaOption2]);
@@ -149,7 +162,13 @@ function cropper(){
     
     // Log the quantity of selections
     function debugQtyAreas (event, id, areas) {
-        console.log(areas.length + " areas", arguments);
+        console.log(areas);
+
+        for (let i = 0; i < areas.length; i++) {
+            const element = areas[i];
+            
+            console.log(element);
+        }
     };
     
     // Display areas coordinates in a div
